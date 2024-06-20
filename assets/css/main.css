@@ -2368,7 +2368,8 @@ input, select, textarea {
 			}
 
 		.image.left {
-			float: left;
+			display: inline-block;
+			/* float: left; */
 			margin: 0 1.5em 1em 0;
 			top: 0.25em;
 		}
