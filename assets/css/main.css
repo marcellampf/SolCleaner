@@ -3493,7 +3493,9 @@ input, select, textarea {
 			}
 
 		}
-
+.footer-info{
+	display: flex;
+}
 		@media screen and (max-width: 980px) {
 
 			#footer {
@@ -3651,6 +3653,7 @@ input, select, textarea {
 		
 		footer {
 			display: flex;
+			flex-direction: column;
 			justify-content: space-between;
 			margin-top: 0px;
 			padding: 20px;
