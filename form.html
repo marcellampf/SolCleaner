@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Make Your Quote</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <h1>Make Your Quote Here !</h1>
+            </header>
+            <!-- Main -->
+            <div id="main">
+                <!-- Content -->
+                <section id="content" class="main">
+                    <h2><em>Are you ready to take the first step towards a home care experience?</em></h2>
+                    <!-- Form -->
+                    <section>
+                        <h2>Start your quote here!</h2>
+                        <form id="quote-form">
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-xsmall">
+                                    <input type="text" name="from_name" id="name" placeholder="Name" required />
+                                </div>
+                                <div class="col-6 col-12-xsmall">
+                                    <input type="email" name="from_email" id="email" placeholder="Email" required />
+                                </div>
+                                <div class="col-12">
+                                    <select name="service" id="service" required>
+                                        <option value="">- Service -</option>
+                                        <option value="cleaning_airbnb">Cleaning - AirBnb</option>
+                                        <option value="deep_clean">Deep Clean</option>
+                                        <option value="cleaning_office">Cleaning - Office</option>
+                                        <option value="move_in_out">Cleaning - Move in/out</option>
+                                        <option value="home_organization">Home Organization</option>
+                                        <option value="pet_sitter">Pet Sitter</option>
+                                    </select>
+                                </div>
+                                <!-- Additional fields -->
+                                <div id="additional-fields" class="col-12 hidden">
+                                    <!-- General fields -->
+                                    <div class="common-fields hidden">
+                                        <label for="fridge_cleaning">Fridge Cleaning?</label>
+                                        <select name="fridge_cleaning" id="fridge_cleaning">
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+
+                                        <label for="basement">Basement?</label>
+                                        <select name="basement" id="basement">
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+
+                                        <label for="cleaning_date">Desired Cleaning Date</label>
+                                        <input type="date" name="cleaning_date" id="cleaning_date" />
+
+                                        <label for="recurring_cleaning">Recurring Cleaning?</label>
+                                        <select name="recurring_cleaning" id="recurring_cleaning">
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                    </div>
+                                    <!-- Deep Clean, Move in/out, Cleaning - AirBnb -->
+                                    <div class="col-12 deep-clean-fields hidden">
+                                        <input type="number" name="total_rooms" id="total_rooms" placeholder="Total Rooms" />
+                                        <input type="number" name="total_bathrooms" id="total_bathrooms" placeholder="Total Bathrooms" />
+                                        <input type="number" name="total_balconies" id="total_balconies" placeholder="Total Balconies" />
+                                        <input type="number" name="total_living_rooms" id="total_living_rooms" placeholder="Total Living Rooms" />
+                                    </div>
+                                    <!-- Campos específicos para Home Organization -->
+                                    <div class="col-12 home-organization-fields hidden">
+                                        <input type="number" name="total_closets" id="total_closets" placeholder="Total Closets" />
+                                        <input type="number" name="total_shelves" id="total_shelves" placeholder="Total Shelves" />
+                                        <input type="date" name="organization_date" id="organization_date" placeholder="Date for Organization" />
+                                    </div>
+                                    <!-- Pet Sitter -->
+                                    <div class="pet-sitter-fields hidden">
+                                        <label for="animal1">Animal 1</label>
+                                        <select name="animal1" id="animal1">
+                                            <option value="dog">Dog</option>
+                                            <option value="cat">Cat</option>
+                                            <option value="bird">Bird</option>
+                                            <option value="fish">Fish</option>
+                                            <option value="lagomorph">Lagomorph</option>
+                                            <option value="rodent">Rodent</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <input type="text" name="other_animal1" id="other_animal1" placeholder="Specify Animal" class="hidden" />
+
+                                        <label for="animal2">Animal 2</label>
+                                        <select name="animal2" id="animal2">
+                                            <option value="dog">Dog</option>
+                                            <option value="cat">Cat</option>
+                                            <option value="bird">Bird</option>
+                                            <option value="fish">Fish</option>
+                                            <option value="lagomorph">Lagomorph</option>
+                                            <option value="rodent">Rodent</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <input type="text" name="other_animal2" id="other_animal2" placeholder="Specify Animal" class="hidden" />
+
+                                        <label for="animal_health">Any known diseases or under treatment?</label>
+                                        <select name="animal_health" id="animal_health">
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                        <input type="text" name="health_details" id="health_details" placeholder="Specify Medication" class="hidden" />
+
+                                        <label for="vaccines_up_to_date">Are the vaccines up to date?</label>
+                                        <select name="vaccines_up_to_date" id="vaccines_up_to_date">
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+
+                                        <input type="text" name="travel_duration" id="travel_duration" placeholder="Duration of Travel" />
+                                        <input type="text" name="emergency_contact" id="emergency_contact" placeholder="Emergency Contact Name" />
+                                        <input type="tel" name="emergency_phone" id="emergency_phone" placeholder="Emergency Contact Phone" />
+                                        <input type="text" name="emergency_clinic" id="emergency_clinic" placeholder="Emergency Clinic Address" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                                        <li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer id="footer">
+                <section>
+                    <h2>Contact information</h2>
+                    <ul class="alt">
+                        <li><i class="fas fa-map-marker-alt"></i><span>161 Roehampton, Toronto, ON M4P 1P9 &bull; CA</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>(437) 225-2685</span></li>
+                        <li><i class="far fa-envelope"></i><span><a href="mailto:gigisele.paulino@gmail.com">gigisele.paulino@gmail.com</a></span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Company</h2>
+                    <ul class="alt">
+                        <li><span><a href="#intro">About us</a></span></li>
+                        <li><span><a href="#">Contact us</a></span></li>
+                        <li><span><a href="#cta">Get Started</a></span></li>
+                        <li><span><a href="#second">Team</a></span></li>
+                        <li><span><a href="#">Career</a></span></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://wa.me/14372252685" class="icon brands fa-whatsapp alt"><span class="label">WhatsApp</span></a></li>
+                    </ul>
+                </section>
+                <p class="copyright">&copy; Sol Cleaner. All rights reserved.</p>
+            </footer>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/form.js"></script>
+        <script type="text/javascript">
+            document.getElementById('quote-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                emailjs.sendForm('service_aqr1aoq', 'template_kz17f8e', this)
+                    .then(function() {
+                        alert('Your message has been sent successfully!');
+                    }, function(error) {
+                        alert('Failed to send your message. Error: ' + JSON.stringify(error));
+                    });
+            });
+        </script>
+
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "6zeEOMf0LLC1_Ji3_",
+            });
+        })();
+        </script>
+
+    </body>
+</html>
