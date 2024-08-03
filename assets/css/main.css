@@ -3599,6 +3599,101 @@ input, select, textarea {
 
 		/*regular cleaning - css thaian*/
 
+		/* styles.css */
+
+h1, h2, h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 1.75em;
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.image {
+    position: relative;
+    max-width: 500px;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay, .img-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.image:nth-child(even) .text-overlay {
+    display: block;
+}
+
+.image:nth-child(odd) .img-overlay {
+    display: block;
+}
+
+
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.image {
+			position: relative;
+			max-width: 500px;
+			margin: 15px;
+		}
+		
+		.image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.text-overlay, .img-overlay {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
+			background: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 20px;
+			box-sizing: border-box;
+			display: none;
+		}
+		
+		.image:nth-child(even) .text-overlay {
+			display: block;
+		}
+		
+		.image:nth-child(odd) .img-overlay {
+			display: block;
+		}
+		
+
 		.align{
 			display: flex;
 			flex-direction: row;
