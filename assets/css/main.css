@@ -1979,7 +1979,7 @@ input, select, textarea {
 				color: #ffffff !important;
 			}
 
-/* Form */
+/* ----------------------------------------------- Form ----------------------------------------------- */
 
 	form {
 		margin: 0 0 2em 0;
@@ -1989,12 +1989,17 @@ input, select, textarea {
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
-		margin: 0 0 1em 0;
+		margin: 0 0 0.5em 0;
 	}
 
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	/* Form js */
+	input[type="number"], 
+	input[type="date"],
+	input[type="tel"],
+	/* Form js */
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2009,11 +2014,17 @@ input, select, textarea {
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+		margin-bottom: 1em; 
 	}
 
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		/* Form js */
+		input[type="number"]:invalid, 
+		input[type="date"]:invalid,
+		input[type="tel"]:invalid,
+		/* Form js */
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2026,6 +2037,7 @@ input, select, textarea {
 		height: 2.75em;
 		padding-right: 2.75em;
 		text-overflow: ellipsis;
+		background-color: #06ec79;
 	}
 
 		select:focus::-ms-value {
@@ -2039,6 +2051,11 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	/* Form js */
+	input[type="number"], 
+	input[type="date"],
+	input[type="tel"],
+	/* Form js */
 	select {
 		height: 2.75em;
 	}
@@ -2139,6 +2156,11 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	/* Form js */
+	input[type="number"], 
+	input[type="date"],
+	input[type="tel"],
+	/* Form js */
 	select,
 	textarea {
 		background-color: rgba(255, 255, 255, 0.075);
@@ -2147,7 +2169,12 @@ input, select, textarea {
 
 		input[type="text"]:focus,
 		input[type="password"]:focus,
-		input[type="email"]:focus,
+		input[type="email"]:focus, 
+		/* Form js */
+		input[type="number"]:focus, 
+		input[type="date"]:focus,
+		input[type="tel"]:focus,
+		/* Form js */
 		select:focus,
 		textarea:focus {
 			border-color: #8cc9f0;
@@ -2189,25 +2216,26 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #FFFFFF80 !important;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #FFFFFF80 !important;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #FFFFFF80 !important;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #FFFFFF80 !important;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #FFFFFF80 !important;
 	}
 
+/* ----------------------------------------------- End of Form ----------------------------------------------- */
 /* Icon */
 
 	.icon {
@@ -2849,7 +2877,7 @@ input, select, textarea {
 
 		}
 
-/* Header */
+/*--------------------------------------------------Header--------------------------------------------------*/
 
 	#header {
 		padding: 5em 5em 1em 5em ;
@@ -2988,7 +3016,7 @@ input, select, textarea {
 			transform: scale(0.8) rotate(-30deg);
 		}
 
-/* Nav */
+/*--------------------------------------------------Nav--------------------------------------------------*/
 
 	#nav {
 		-moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
@@ -3113,7 +3141,7 @@ input, select, textarea {
 
 		}
 
-/* Main */
+/*------------------------------------------------------------Main------------------------------------------------------------/ */
 
 	#main {
 		background-color: #ffffff;
@@ -3229,6 +3257,9 @@ input, select, textarea {
 		#main input[type="text"],
 		#main input[type="password"],
 		#main input[type="email"],
+		#main input[type="number"],
+		#main input[type="date"],
+		#main input[type="tel"],
 		#main select,
 		#main textarea {
 			background-color: rgba(222, 222, 222, 0.25);
@@ -3238,14 +3269,17 @@ input, select, textarea {
 			#main input[type="text"]:focus,
 			#main input[type="password"]:focus,
 			#main input[type="email"]:focus,
+			#main input[type="number"]:focus,
+			#main input[type="date"]:focus,
+			#main input[type="tel"]:focus,
 			#main select:focus,
 			#main textarea:focus {
-				border-color: #8cc9f0;
-				box-shadow: 0 0 0 1px #8cc9f0;
+				border-color: #Fedb8a;
+				box-shadow: 0 0 0 1px #Fedb8a;
 			}
 
 		#main select {
-			background-color: #FFE4E1;
+			 background-color: #FFE4E1; /* rosinha salmao do form */
 
 		}
 
@@ -3458,7 +3492,7 @@ input, select, textarea {
 
 		}
 
-/* Footer */
+/*-----------------------------------Footer-----------------------------------*/
 
 	#footer {
 		display: -moz-flex;
@@ -3493,9 +3527,7 @@ input, select, textarea {
 			}
 
 		}
-.footer-info{
-	display: flex;
-}
+
 		@media screen and (max-width: 980px) {
 
 			#footer {
@@ -3748,7 +3780,6 @@ h3 {
 		
 		footer {
 			display: flex;
-			flex-direction: column;
 			justify-content: space-between;
 			margin-top: 0px;
 			padding: 20px;
