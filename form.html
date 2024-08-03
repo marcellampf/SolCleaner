@@ -12,7 +12,6 @@
                 display: none;
             }
         </style>
-        
     </head>
     <body class="is-preload">
         <!-- Wrapper -->
@@ -53,25 +52,25 @@
                                     <!-- General fields -->
                                     <div class="common-fields hidden">
                                         <label for="fridge_cleaning">Fridge Cleaning?</label>
-                                        <select name="fridge_cleaning" id="fridge_cleaning">
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                        </select>
+                                        <input type="radio" name="fridge_cleaning" id="fridge_cleaning_yes" value="yes">
+                                        <label for="fridge_cleaning_yes">Yes</label>
+                                        <input type="radio" name="fridge_cleaning" id="fridge_cleaning_no" value="no" checked>
+                                        <label for="fridge_cleaning_no">No</label>
 
                                         <label for="basement">Basement?</label>
-                                        <select name="basement" id="basement">
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                        </select>
+                                        <input type="radio" name="basement" id="basement_yes" value="yes">
+                                        <label for="basement_yes">Yes</label>
+                                        <input type="radio" name="basement" id="basement_no" value="no" checked>
+                                        <label for="basement_no">No</label>
 
                                         <label for="cleaning_date">Desired Cleaning Date</label>
                                         <input type="date" name="cleaning_date" id="cleaning_date" />
 
                                         <label for="recurring_cleaning">Recurring Cleaning?</label>
-                                        <select name="recurring_cleaning" id="recurring_cleaning">
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                        </select>
+                                        <input type="radio" name="recurring_cleaning" id="recurring_cleaning_yes" value="yes">
+                                        <label for="recurring_cleaning_yes">Yes</label>
+                                        <input type="radio" name="recurring_cleaning" id="recurring_cleaning_no" value="no" checked>
+                                        <label for="recurring_cleaning_no">No</label>
                                     </div>
                                     <!-- Deep Clean, Move in/out, Cleaning - AirBnb -->
                                     <div class="col-12 deep-clean-fields hidden">
@@ -113,17 +112,17 @@
                                         <input type="text" name="other_animal2" id="other_animal2" placeholder="Specify Animal" class="hidden" />
 
                                         <label for="animal_health">Any known diseases or under treatment?</label>
-                                        <select name="animal_health" id="animal_health">
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                        </select>
+                                        <input type="radio" name="animal_health" id="animal_health_yes" value="yes">
+                                        <label for="animal_health_yes">Yes</label>
+                                        <input type="radio" name="animal_health" id="animal_health_no" value="no" checked>
+                                        <label for="animal_health_no">No</label>
                                         <input type="text" name="health_details" id="health_details" placeholder="Specify Medication" class="hidden" />
 
                                         <label for="vaccines_up_to_date">Are the vaccines up to date?</label>
-                                        <select name="vaccines_up_to_date" id="vaccines_up_to_date">
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                        </select>
+                                        <input type="radio" name="vaccines_up_to_date" id="vaccines_up_to_date_yes" value="yes">
+                                        <label for="vaccines_up_to_date_yes">Yes</label>
+                                        <input type="radio" name="vaccines_up_to_date" id="vaccines_up_to_date_no" value="no" checked>
+                                        <label for="vaccines_up_to_date_no">No</label>
 
                                         <input type="text" name="travel_duration" id="travel_duration" placeholder="Duration of Travel" />
                                         <input type="text" name="emergency_contact" id="emergency_contact" placeholder="Emergency Contact Name" />
