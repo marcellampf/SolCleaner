@@ -182,18 +182,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/form.js"></script>
-        <script type="text/javascript">
-            document.getElementById('quote-form').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-
-                emailjs.sendForm('service_aqr1aoq', 'template_kz17f8e', this)
-                    .then(function() {
-                        alert('Your message has been sent successfully!');
-                    }, function(error) {
-                        alert('Failed to send your message. Error: ' + JSON.stringify(error));
-                    });
-            });
-        </script>
 
         <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
