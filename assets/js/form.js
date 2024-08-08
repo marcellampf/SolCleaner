@@ -114,9 +114,9 @@ document.getElementById('quote-form').addEventListener('submit', function(event)
     emailjs.send('service_aqr1aoq', 'template_kz17f8e', templateParams)
         .then(function(response) {
             alert('Your message has been sent successfully!');
+            document.getElementById('quote-form').reset(); // Reset form after successful submission
+            additionalFields.classList.add('hidden'); // Hide additional fields
         }, function(error) {
             alert('Failed to send your message. Error: ' + JSON.stringify(error));
         });
 });
-
-
