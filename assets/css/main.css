@@ -3557,15 +3557,17 @@ input[type="radio"]:focus + label:before {
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
+		flex-direction: column	;
+		flex-wrap: nowrap;
 		padding: 5em 5em 3em 5em ;
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
 	}
 
 		#footer > * {
-			width: calc(50% - 2em);
-			margin-left: 2em;
+			width: 100%; /* Ensures each section takes full width */
+			margin-left: 0;
+			margin-bottom: 0.5em; /* Adds spacing between sections */
 		}
 
 		#footer .copyright {
@@ -3579,18 +3581,28 @@ input[type="radio"]:focus + label:before {
 				padding: 4em 4em 2em 4em ;
 			}
 		}
+
 .footer-info{
 	display: flex;
+	justify-content: space-around;
 }
 
 .footer-socialMedia {
 	display: flex;
 	align-items: center; 
 	justify-content: center; 
+	padding: 0; /* Adjust padding to reduce height */
+	margin-bottom:0; /* Optional: Adjust margin if needed */
+
+}
+.footer-copyright{
+	padding: 0;
 }
 .footer-copyright>p {
 	text-align: center; 
 	margin-top: 1rem; 
+	margin:0;
+	
 }
 .footer-icons{
 	display: flex;
@@ -3601,10 +3613,19 @@ input[type="radio"]:focus + label:before {
 .footer-icons ul li{
 	list-style: none;
 }
-footer{
+
+.footer-socialMedia ul.footer-icons {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap; /* Ensures icons wrap if needed */
+	padding: 0;
+	margin: 0;
 }
+
+.footer-socialMedia ul.footer-icons li {
+	margin: 0 0.5em; /* Adjust spacing between icons */
+}
+
+
 		@media screen and (max-width: 980px) {
 			#footer {
 				padding: 4em 3em 2em 3em ;
