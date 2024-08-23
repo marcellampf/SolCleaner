@@ -179,7 +179,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 		color: inherit;
 	}
 
@@ -2366,10 +2366,12 @@ input[type="radio"]:focus + label:before {
 		list-style: disc;
 		margin: 0 0 2em 0;
 		padding-left: 1em;
+		
 	}
 
 		ul li {
 			padding-left: 0.5em;
+			
 		}
 
 		ul.alt {
@@ -2378,7 +2380,7 @@ input[type="radio"]:focus + label:before {
 		}
 
 			ul.alt li {
-				border-top: solid 1px;
+				/* border-top: solid 1px; */
 				padding: 0.5em 0;
 			}
 
@@ -3362,6 +3364,7 @@ input[type="radio"]:focus + label:before {
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
+	/* height: 10rem; */
 }
 
 .bannerType-Text,
@@ -3395,6 +3398,7 @@ input[type="radio"]:focus + label:before {
 
 .bannerType-Text-detailed-normal {
 	font-family: var(--fontTwo);
+	font-size: 95%;
 }
 
 .icon.fa-calendar-check {
@@ -3404,15 +3408,143 @@ input[type="radio"]:focus + label:before {
 .bannerType-Price {
 	font-size: 3rem;
 	font-weight: 900;
+	color: var(--colorAccentOne);
 }
 
 .bannerType-button {
 	border-radius: 100%;
 	height: 6rem;
 	width: 6rem;
+	margin: 1rem;
 	font-size: 5rem;
 }
 
+/* Media Queries */
+
+/* For screens up to 1280px */
+@media (max-width: 1280px) {
+	.bannerType-Text-detailed-main {
+		font-size: 1.5rem;
+	}
+
+	.bannerType-Text-detailed-normal {
+		font-size: 1rem;
+	}
+
+	.bannerType-Price {
+		font-size: 2.5rem;
+	}
+
+	.bannerType-button {
+		height: 5rem;
+		width: 5rem;
+		font-size: 4rem;
+	}
+}
+
+/* For screens up to 980px */
+@media (max-width: 980px) {
+	.bannerType {
+		padding: 0.4rem;
+	}
+
+	.bannerType-Text-detailed-main {
+		font-size: 1.3rem;
+		letter-spacing: 0.4rem;
+	}
+
+	.bannerType-Text-detailed-normal {
+		font-size: 1rem;
+	}
+
+	.bannerType-Price {
+		font-size: 2rem;
+	}
+
+	.bannerType-button {
+		height: 4.5rem;
+		width: 4.5rem;
+		font-size: 3.5rem;
+	}
+}
+
+/* For screens up to 736px */
+@media (max-width: 736px) {
+	.bannerType {
+		padding: 0.3rem;
+	}
+
+	.bannerType-Text-detailed-main {
+		font-size: 1.1rem;
+		letter-spacing: 0.3rem;
+	}
+
+	.bannerType-Text-detailed-normal {
+		font-size: 0.8rem;
+	}
+
+	.bannerType-Price {
+		font-size: 1.8rem;
+	}
+
+	.bannerType-button {
+		height: 4rem;
+		width: 4rem;
+		font-size: 3rem;
+	}
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+	.bannerType {
+		padding: 0.2rem;
+	}
+
+	.bannerType-Text-detailed-main {
+		font-size: 0.8rem;
+		letter-spacing: 0.2rem;
+	}
+
+	.bannerType-Text-detailed-normal {
+		font-size: 0.6rem;
+	}
+
+	.bannerType-Price {
+		font-size: 1.5rem;
+	}
+
+	.bannerType-button {
+		height: 3.5rem;
+		width: 3.5rem;
+		font-size: 2.5rem;
+	}
+}
+
+/* For screens up to 360px */
+@media (max-width: 360px) {
+	.bannerType {
+		padding: 0.1rem;
+	}
+
+	.bannerType-Text-detailed-main {
+		font-size: 0.6rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.bannerType-Text-detailed-normal {
+		font-size: 0.4rem;
+	}
+
+	.bannerType-Price {
+		font-size: 1.2rem;
+	}
+
+	.bannerType-button {
+		height: 3rem;
+		width: 3rem;
+		font-size: 2rem;
+	}
+}
 
 
 
@@ -3493,6 +3625,7 @@ footer{
 			#footer {
 				padding: 3em 2em 1em 2em ;
 			
+			}
 		}
 
 		@media screen and (max-width: 480px) {
