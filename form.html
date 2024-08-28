@@ -65,7 +65,7 @@
                                             <option value="townhouse">Townhouse</option>
                                         </select>
                                         <label for="size_square_feet">Size in Square Feet</label>
-                                        <input type="number" name="size_square_feet" id="size_square_feet" placeholder="Size in Sq Ft" required/>
+                                        <input type="number" name="size_square_feet" id="size_square_feet" placeholder="Size in Sq Ft" min="1" max="54000" required/>
                                         <label for="postal_code">Postal Code</label>
                                         <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code" required/>
                                         <label for="total_bathrooms">Total Bathrooms</label>
@@ -163,17 +163,37 @@
                         </form>
                     </section>
     <!-- Quote summary -->
-                    <aside id="quote-summary" style="flex: 0.4; background-color: #f0f0f0; padding: 20px; border-radius: 8px; max-width: 300px;">
+                    <aside id="quote-summary">
                         <h2>Quote Summary</h2>
-                        <p>Service: <span id="summary-service">None</span></p>
-                        <p>Unit Type: <span id="summary-unit-type">None</span></p>
-                        <p>Size: <span id="summary-size">0</span> sq ft</p>
-                        <p>Total Bathrooms: <span id="summary-bathrooms">0</span></p>
-                        <p>Postal Code: <span id="summary-postal-code">None</span></p>
-                        <p>Cleaning Date: <span id="summary-date">None</span></p>
-                        <p>Frequency: <span id="summary-frequency">None</span></p>
-                        <!-- Additional fields can be added as needed -->
+                        <p class="summary-field summary-service">Service: <span id="summary-service">None</span></p>
+                        <p class="summary-field summary-unit-type">Unit Type: <span id="summary-unit-type">None</span></p>
+                        <p class="summary-field summary-size">Size: <span id="summary-size">0</span> sq ft</p>
+                        <p class="summary-field summary-bathrooms">Total Bathrooms: <span id="summary-bathrooms">0</span></p>
+                        <p class="summary-field summary-postal-code">Postal Code: <span id="summary-postal-code">None</span></p>
+                        <p class="summary-field summary-date">Desired Cleaning Date: <span id="summary-date">None</span></p>
+                        <p class="summary-field summary-frequency">Frequency: <span id="summary-frequency">None</span></p>
+                    
+                        <!-- balcony -->
+                        <p class="summary-field summary-balcony-size hidden">Balcony Size: <span id="summary-balcony-size">0</span> sq ft</p>
+                    
+                        <!-- home organization -->
+                        <p class="summary-field summary-closets hidden">Total Closets: <span id="summary-closets">0</span></p>
+                        <p class="summary-field summary-shelves hidden">Total Shelves: <span id="summary-shelves">0</span></p>
+                        <p class="summary-field summary-org-date hidden">Organization Date: <span id="summary-org-date">None</span></p>
+                    
+                        <!-- pet sitter -->
+                        <p class="summary-field summary-animal1 hidden">Animal 1: <span id="summary-animal1">None</span></p>
+                        <p class="summary-field summary-specify-animal1 hidden">Specify Animal 1: <span id="summary-specify-animal1">None</span></p>
+                        <p class="summary-field summary-animal2 hidden">Animal 2: <span id="summary-animal2">None</span></p>
+                        <p class="summary-field summary-specify-animal2 hidden">Specify Animal 2: <span id="summary-specify-animal2">None</span></p>
+                        <p class="summary-field summary-health hidden">Known Diseases/Treatment: <span id="summary-health">No</span></p>
+                        <p class="summary-field summary-vaccines hidden">Vaccines Up-to-Date: <span id="summary-vaccines">No</span></p>
+                        <p class="summary-field summary-travel-duration hidden">Duration of Travel: <span id="summary-travel-duration">None</span></p>
+                        <p class="summary-field summary-emergency-contact hidden">Emergency Contact: <span id="summary-emergency-contact">None</span></p>
+                        <p class="summary-field summary-emergency-phone hidden">Emergency Phone: <span id="summary-emergency-phone">None</span></p>
+                        <p class="summary-field summary-emergency-clinic hidden">Emergency Clinic: <span id="summary-emergency-clinic">None</span></p>
                     </aside>
+    
         <!-- end quote summary -->
                 </div>
             </section>
