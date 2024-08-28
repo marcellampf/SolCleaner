@@ -138,3 +138,114 @@ function addEventListeners() {
         });
     }
 }
+
+
+// Summary service
+
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceField = document.getElementById('service');
+
+    function toggleSummaryFields(service) {
+        const allFields = document.querySelectorAll('.summary-field');
+        allFields.forEach(field => field.classList.add('hidden'));
+
+        switch(service) {
+            case 'cleaning_airbnb':
+            case 'deep_clean':
+            case 'regular_clean':
+            case 'one_time_clean':
+            case 'move_in_out':
+                document.querySelector('.summary-service').classList.remove('hidden');
+                document.querySelector('.summary-unit-type').classList.remove('hidden');
+                document.querySelector('.summary-size').classList.remove('hidden');
+                document.querySelector('.summary-bathrooms').classList.remove('hidden');
+                document.querySelector('.summary-postal-code').classList.remove('hidden');
+                document.querySelector('.summary-date').classList.remove('hidden');
+                document.querySelector('.summary-frequency').classList.remove('hidden');
+                break;
+
+            case 'balcony':
+                document.querySelector('.summary-service').classList.remove('hidden');
+                document.querySelector('.summary-balcony-size').classList.remove('hidden');
+                break;
+
+            case 'home_organization':
+                document.querySelector('.summary-service').classList.remove('hidden');
+                document.querySelector('.summary-org-date').classList.remove('hidden');
+                document.querySelector('.summary-closets').classList.remove('hidden');
+                document.querySelector('.summary-shelves').classList.remove('hidden');
+                break;
+
+            case 'pet_sitter':
+                document.querySelector('.summary-service').classList.remove('hidden');
+                document.querySelector('.summary-animal1').classList.remove('hidden');
+                document.querySelector('.summary-specify-animal1').classList.remove('hidden');
+                document.querySelector('.summary-animal2').classList.remove('hidden');
+                document.querySelector('.summary-specify-animal2').classList.remove('hidden');
+                document.querySelector('.summary-health').classList.remove('hidden');
+                document.querySelector('.summary-vaccines').classList.remove('hidden');
+                document.querySelector('.summary-travel-duration').classList.remove('hidden');
+                document.querySelector('.summary-emergency-contact').classList.remove('hidden');
+                document.querySelector('.summary-emergency-phone').classList.remove('hidden');
+                document.querySelector('.summary-emergency-clinic').classList.remove('hidden');
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    function updateSummary() {
+        const serviceSelect = document.getElementById('service');
+        const selectedServiceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+    
+        document.getElementById('summary-service').textContent = selectedServiceText || 'None';
+        document.getElementById('summary-unit-type').textContent = document.getElementById('unit_type').value || 'None';
+        document.getElementById('summary-size').textContent = document.getElementById('size_square_feet').value ? `${document.getElementById('size_square_feet').value} sq ft` : '0 sq ft';
+        document.getElementById('summary-bathrooms').textContent = document.getElementById('total_bathrooms').value || '0';
+        document.getElementById('summary-postal-code').textContent = document.getElementById('postal_code').value || 'None';
+        document.getElementById('summary-date').textContent = document.getElementById('cleaning_date').value || 'None';
+        document.getElementById('summary-frequency').textContent = document.getElementById('frequency').value || 'None';
+    
+        document.getElementById('summary-balcony-size').textContent = document.getElementById('balcony_size').value ? `${document.getElementById('balcony_size').value} sq ft` : '0 sq ft';
+        
+        document.getElementById('summary-closets').textContent = document.getElementById('total_closets').value || '0';
+        document.getElementById('summary-shelves').textContent = document.getElementById('total_shelves').value || '0';
+        document.getElementById('summary-org-date').textContent = document.getElementById('organization_date').value || 'None';
+    
+        document.getElementById('summary-animal1').textContent = document.getElementById('animal1').value || 'None';
+        document.getElementById('summary-specify-animal1').textContent = document.getElementById('other_animal1').value || 'None';
+        document.getElementById('summary-animal2').textContent = document.getElementById('animal2').value || 'None';
+        document.getElementById('summary-specify-animal2').textContent = document.getElementById('other_animal2').value || 'None';
+        document.getElementById('summary-health').textContent = document.querySelector('input[name="animal_health"]:checked').value || 'No';
+        document.getElementById('summary-vaccines').textContent = document.querySelector('input[name="vaccines_up_to_date"]:checked').value || 'No';
+        document.getElementById('summary-travel-duration').textContent = document.getElementById('travel_duration').value || 'None';
+        document.getElementById('summary-emergency-contact').textContent = document.getElementById('emergency_contact').value || 'None';
+        document.getElementById('summary-emergency-phone').textContent = document.getElementById('emergency_phone').value || 'None';
+        document.getElementById('summary-emergency-clinic').textContent = document.getElementById('emergency_clinic').value || 'None';
+    }
+    
+
+    serviceField.addEventListener('change', function() {
+        const selectedService = serviceField.value;
+        toggleSummaryFields(selectedService);
+        updateSummary();
+    });
+
+    const fieldsToWatch = ['unit_type', 'size_square_feet', 'total_bathrooms', 'postal_code', 'cleaning_date', 'frequency', 'balcony_size', 'total_closets', 'total_shelves', 'organization_date', 'animal1', 'other_animal1', 'animal2', 'other_animal2', 'travel_duration', 'emergency_contact', 'emergency_phone', 'emergency_clinic'];
+
+    fieldsToWatch.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('input', updateSummary);
+            element.addEventListener('change', updateSummary);
+        }
+    });
+
+    document.querySelectorAll('input[name="animal_health"], input[name="vaccines_up_to_date"]').forEach(radio => {
+        radio.addEventListener('change', updateSummary);
+    });
+
+    toggleSummaryFields(serviceField.value);
+    updateSummary();
+});
