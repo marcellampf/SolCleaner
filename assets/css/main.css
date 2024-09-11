@@ -908,6 +908,7 @@ body.is-preload #header.alt .logo {
     font-size: 18px;
     color: var(--colorSecondary); 
     margin-bottom: 20px; 
+	font-weight: 400;
 }
 
 #footer p, 
@@ -959,4 +960,11 @@ body.is-preload #header.alt .logo {
     width: 100%; 
     font-size: 12px; 
     color: var(--colorSecondary); 
+}
+
+/* centralizar os itens do social media */
+#footer section .icons{
+	display: flex;
+	flex-direction: column;
+    align-items: center; 
 }
