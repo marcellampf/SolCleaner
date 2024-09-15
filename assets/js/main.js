@@ -129,3 +129,13 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.toggle('active');
     });
 });
+
+
+const hamburger = document.querySelector('.hamburger-menu');
+const mobileNav = document.querySelector('#mobile-nav');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('hamburger-active');
+    mobileNav.classList.toggle('active');
+});
+
