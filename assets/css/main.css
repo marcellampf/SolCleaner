@@ -897,7 +897,8 @@ body.is-preload #header.alt .logo {
     justify-content: space-between; 
     width: 100%; 
     max-width: 1200px; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px; 	
+	margin: 2rem;
 }
 
 #footer section {
