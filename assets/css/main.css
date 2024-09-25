@@ -600,6 +600,12 @@ body.is-preload #header.alt .logo {
 	width: 100%;
 	align-items: center;
 }
+.bannerType-button .fa-calendar-check {
+    color: var(--colorAccentTwo); /* Define a cor inicial do ícone */
+}
+.bannerType-button:hover .fa-calendar-check {
+    color: var(--lightgray); /* Define a cor ao passar o mouse */
+}
 
 .bannerType-Text,
 .bannerType-Price,
@@ -638,11 +644,27 @@ body.is-preload #header.alt .logo {
 	color: var(--colorAccentTwo);
 }
 
+
+
+.bannerType-Price > p{
+	margin: 0;
+	padding: 0;
+}
+
 .bannerType-Price {
+    color: var(--colorAccentTwo);
+	flex-direction: column;
+	margin: 0;
+}
+.bannerType-Price-from{
+	font-size: 1rem;
+}
+.bannerType-Price-value{
 	font-size: 3rem;
 	font-weight: 900;
-    color: var(--colorAccentTwo);
 }
+
+
 
 .bannerType-button {
 	border-radius: 100%;
@@ -657,11 +679,11 @@ body.is-preload #header.alt .logo {
     border-bottom: none;
 }
 
-.bannerType-button a:hover {
+/* .bannerType-button a:hover {
     text-decoration: none;
     border-bottom: none;
 	color: var(--lightgray);
-}
+} */
 /* ------------------------------------------ Media screen services ------------------------------------------ */
 @media screen and (max-width: 768px) {
     .bannerType { flex-direction: row; padding: 1rem; width: 90%; margin: 0 auto; align-items: center; }
@@ -719,7 +741,7 @@ body.is-preload #header.alt .logo {
 }
 
 .carousel-card {
-    flex: 0 0 850px;
+    flex: 0 0 770px;
     height: 150px;
     padding: 1em;
     background-color: var(--lavender);
