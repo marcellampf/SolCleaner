@@ -256,3 +256,34 @@ label[for="recurring_cleaning_no"] {
     font-size: 12px; 
     color: var(--brown); 
 }
+
+@media screen and (max-width: 480px) {
+    /* Ajustes de largura para inputs e elementos */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        width: calc(100% - 20px); /* Garante espaçamento lateral */
+        margin-right: 10px; /* Adiciona margem à direita */
+    }
+
+    /* Ajuste de padding para o form e resumo */
+    #quote-form, #quote-summary {
+        padding-left: 15px; /* Adiciona espaçamento para não colar na borda */
+        padding-right: 15px; /* Adiciona espaçamento para não colar na borda */
+    }
+
+    /* Ajustes no container principal */
+    #main-content {
+        padding-left: 15px; /* Espaçamento lateral para o container principal */
+        padding-right: 15px; /* Espaçamento lateral */
+    }
+
+    /* Garantir alinhamento no rodapé */
+    #footer {
+        padding-left: 15px; /* Espaçamento para o rodapé */
+        padding-right: 15px; /* Espaçamento para o rodapé */
+    }
+}

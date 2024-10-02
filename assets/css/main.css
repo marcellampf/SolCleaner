@@ -601,7 +601,7 @@ body.is-preload #header.alt .logo {
 	align-items: center;
 }
 .bannerType-button .fa-calendar-check {
-    color: var(--colorAccentTwo); /* Define a cor inicial do ícone */
+    color: var(--colorNeutralThree); /* Define a cor inicial do ícone */
 }
 .bannerType-button:hover .fa-calendar-check {
     color: var(--lightgray); /* Define a cor ao passar o mouse */
@@ -1022,4 +1022,34 @@ body.is-preload #header.alt .logo {
     .content-wrapper {
         flex-direction: column;
     }
+}
+
+/* Center content on the One-Time Cleaning page */
+#single-page .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#single-page .service {
+    width: 80%; /* Reduces the width to 80% of the parent container */
+    max-width: 800px; /* Sets a maximum width */
+    margin: 0 auto; /* Centers the box horizontally */
+}
+
+#single-page .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#single-page .gallery .image {
+    flex: 0 0 30%; /* Adjust percentage as needed */
+    text-align: center;
+}
+
+#single-page .gallery .image img {
+    max-width: 100%;
+    border-radius: 8px;
 }
