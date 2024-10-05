@@ -139,3 +139,30 @@ hamburger.addEventListener('click', function() {
     mobileNav.classList.toggle('active');
 });
 
+ // Seleciona o modal e elementos necessários
+ var modal = document.getElementById("imageModal");
+ var modalImg = document.getElementById("modalImage");
+ var closeBtn = document.getElementsByClassName("close")[0];
+
+ // Seleciona todas as imagens na galeria
+ var galleryImages = document.querySelectorAll(".gallery .image img");
+
+ // Adiciona o evento de clique a cada imagem da galeria
+ galleryImages.forEach(function(img) {
+	 img.onclick = function() {
+		 modal.style.display = "block";
+		 modalImg.src = this.src;
+	 }
+ });
+
+ // Fecha o modal ao clicar no "X"
+ closeBtn.onclick = function() {
+	 modal.style.display = "none";
+ }
+
+ // Fecha o modal ao clicar fora da imagem
+ modal.onclick = function(event) {
+	 if (event.target == modal) {
+		 modal.style.display = "none";
+	 }
+ }
