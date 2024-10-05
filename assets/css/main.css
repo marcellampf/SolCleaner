@@ -1094,3 +1094,10 @@ body.is-preload #header.alt .logo {
     text-decoration: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        max-height: 80%;
+    }
+}
