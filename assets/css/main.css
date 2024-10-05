@@ -679,11 +679,22 @@ body.is-preload #header.alt .logo {
     border-bottom: none;
 }
 
-/* .bannerType-button a:hover {
-    text-decoration: none;
-    border-bottom: none;
-	color: var(--lightgray);
-} */
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Alinha verticalmente no celular */
+    }
+
+    .service {
+        width: 100%; /* Ocupa toda a largura no celular */
+        margin-bottom: 2rem; /* Espaçamento entre as caixas */
+    }
+
+    .gallery .image {
+        flex: 1 1 100%; /* Ocupa 100% da largura disponível */
+    }
+}
+
 /* ------------------------------------------ Media screen services ------------------------------------------ */
 @media screen and (max-width: 768px) {
     .bannerType { flex-direction: row; padding: 1rem; width: 90%; margin: 0 auto; align-items: center; }
