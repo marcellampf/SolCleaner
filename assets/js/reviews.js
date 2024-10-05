@@ -1,10 +1,10 @@
 const reviews = [
-    { name: 'John Doe', text: 'Amazing service! My home has never been cleaner.', rating: 4.5 },
-    { name: 'Jane Smith', text: 'The team was very professional and detailed. Highly recommended.', rating: 5 },
-    { name: 'Alex Johnson', text: 'I loved the result, they were fast and efficient!', rating: 4 },
-    { name: 'Emily Brown', text: 'Excellent job, would hire again!', rating: 4.5 },
-    { name: 'Michael White', text: 'Best cleaning service in town!', rating: 5 },
-    { name: 'Sara Black', text: 'Very satisfied with the service!', rating: 4 }
+    { name: 'Juliana Bragança', text: 'Thank you for your partnership during these six months! May we continue for a long time! And the helper is great, I have nothing to complain about.', rating: 4.5 },
+    { name: 'Roseann', text: 'Hi Gisele, Thanks so much for a wonderful service you and Katherine provided today.  I came home to a clean and organized home.  As usual you did a terrific job with the cleaning and the lovely organization really makes me feel  fantastic.Thank you!!! ', rating: 5 },
+    { name: 'Isha', text: 'The cleaning was amazing as usual!', rating: 4 },
+    { name: 'Jonathan', text: 'Hi Gisele, sounds good! Katherine was great and the work was perfect as always.', rating: 4.5 },
+    { name: 'Chris', text: 'My place looks amazing. Thank you for all the extras you do, I so appreciate you.  I have never been good at finding things a place and you re so good at that. It was lovely to see you.', rating: 5 },
+    { name: 'Sandra', text: 'Sandra', rating: 4 }
 ];
 
 function generateStars(rating) {
