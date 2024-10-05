@@ -4,7 +4,7 @@ const reviews = [
     { name: 'Isha', text: 'The cleaning was amazing as usual!', rating: 4 },
     { name: 'Jonathan', text: 'Hi Gisele, sounds good! Katherine was great and the work was perfect as always.', rating: 4.5 },
     { name: 'Chris', text: 'My place looks amazing. Thank you for all the extras you do, I so appreciate you.  I have never been good at finding things a place and you re so good at that. It was lovely to see you.', rating: 5 },
-    { name: 'Sandra', text: 'Sandra', rating: 4 }
+    { name: 'Sandra', text: 'Thank you, Gisele. Katherine was wonderful.', rating: 4 }
 ];
 
 function generateStars(rating) {
