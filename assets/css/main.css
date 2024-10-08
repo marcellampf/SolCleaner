@@ -696,19 +696,66 @@ body.is-preload #header.alt .logo {
 }
 
 /* ------------------------------------------ Media screen services ------------------------------------------ */
+/* Ajuste para as caixas em telas menores */
 @media screen and (max-width: 768px) {
-    .bannerType { flex-direction: row; padding: 1rem; width: 90%; margin: 0 auto; align-items: center; }
-    .bannerType-Text { width: 100%; text-align: center; }
-    .bannerType-button { height: 4rem; width: 4rem; font-size: 2rem; margin-right: 1rem; }
-    .bannerType-Price { font-size: 1.5rem; margin-top: 1rem; text-align: right; }
+    .bannerType {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        padding: 1rem;
+        width: 100%; /* Garante que as caixas ocupem toda a largura */
+    }
+
+    .bannerType-Text {
+        width: 100%; /* O texto ocupa a largura total */
+        text-align: center;
+        word-wrap: break-word; /* Quebra o texto para evitar overflow */
+    }
+
+    .bannerType-Text-detailed-main {
+        font-size: 1.5rem; /* Diminui o tamanho do título */
+    }
+
+    .bannerType-Price-value {
+        font-size: 2rem; /* Ajusta o tamanho dos valores */
+    }
+
+    .bannerType-button {
+        height: 4rem; /* Ajusta o tamanho do botão de ícone */
+        width: 4rem;
+        font-size: 2rem;
+    }
+
+	.bannerType-button .fa-calendar-check {
+        font-size: 2rem; /* Aumente o valor conforme necessário */
+    }
 }
 
+/* Ajuste para telas menores, como no iPhone 14 Pro Max */
 @media screen and (max-width: 480px) {
-    .bannerType { padding: 0.5rem; width: 100%; flex-direction: row; align-items: center; }
-    .bannerType-Text { width: 100%; text-align: center; }
-    .bannerType-Price { font-size: 1.25rem; text-align: right; }
-    .bannerType-button { height: 3rem; width: 3rem; font-size: 1.5rem; margin-right: 1rem; }
+    .bannerType {
+        padding: 0.5rem;
+        width: 100%; /* Garante que as caixas fiquem com 100% da largura */
+    }
+
+    .bannerType-Text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bannerType-Text-detailed-main {
+        font-size: 1.2rem; /* Diminui o tamanho do título para caber na tela */
+    }
+
+    .bannerType-Price-value {
+        font-size: 1.5rem; /* Diminui o tamanho dos valores */
+    }
+
+    .bannerType-button {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1.5rem;
+    }
 }
+
 
 /* ------------------------------------------ Wrapper ------------------------------------------ */
 
@@ -1110,5 +1157,54 @@ body.is-preload #header.alt .logo {
     .modal-content {
         max-width: 90%;
         max-height: 80%;
+    }
+}
+
+/* Ajustes para centralizar o conteúdo e ocupar mais espaço em telas pequenas */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        width: 95%; /* Ocupar 95% da largura da tela */
+        margin: 0 auto; /* Centralizar conteúdo */
+        padding: 1rem; /* Adicionar espaçamento */
+    }
+
+    .service {
+        width: 100%; /* Cada serviço ocupa toda a largura */
+        margin-bottom: 2rem; /* Adicionar espaço entre os serviços */
+        text-align: left; /* Alinhar texto à esquerda */
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column; /* Mudar a galeria para vertical */
+        gap: 1rem; /* Espaço entre as imagens */
+    }
+
+    .gallery .image {
+        width: 100%; /* Imagens ocupam toda a largura disponível */
+        text-align: center; /* Centralizar as imagens */
+    }
+
+    img {
+        width: 100%; /* Assegurar que as imagens ocupem 100% da largura do contêiner */
+        height: auto; /* Manter a proporção */
+        border-radius: 8px;
+    }
+
+    #call-to-action {
+        text-align: center; /* Centralizar o call-to-action */
+        padding: 1.5rem 0; /* Espaço em volta */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-wrapper {
+        width: 100%; /* Ocupa toda a largura da tela em dispositivos pequenos */
+        padding: 1.5rem; /* Um pouco mais de espaçamento */
+    }
+
+    .gallery {
+        gap: 0.5rem; /* Reduzir espaço entre as imagens */
     }
 }
