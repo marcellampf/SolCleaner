@@ -1,3 +1,11 @@
+(function(){
+    const key = atob("NnpFRU9NZjBMTEMxX0ppM18="); 
+    emailjs.init({
+        publicKey: key,
+    });
+})();
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var serviceSelect = document.getElementById('service');
     var additionalFields = document.getElementById('additional-fields');
