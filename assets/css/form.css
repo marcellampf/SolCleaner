@@ -26,7 +26,7 @@ body {
     background-color: var(--lightPink); 
     margin: 0;
     font-family: "Roboto", 'Times New Roman', Times, serif;
-    font-weight: 100; /* Roboto Thin */
+    font-weight: 100;
 }
 
 #wrapper {
@@ -37,41 +37,41 @@ body {
 
 #main-content {
     display: flex;
-    justify-content: flex-start; /* Alinhamento inicial para o começo */
-    align-items: flex-start; /* Alinha os itens ao topo */
-    margin-top: 40px; /* Margem superior maior */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 40px;
     margin-bottom: 20px;
-    width: 100%; /* Ocupa toda a largura disponível */
-    gap: 30px; /* Aumenta o espaçamento entre o form e o summary */
+    width: 100%;
+    gap: 30px;
 }
 
 #quote-form {
-    background-color: var(--lavender); /* Cinza claro */
+    background-color: var(--lavender);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 60%; /* Permite que o formulário ocupe mais espaço */
-    min-width: 600px; /* tamanho minimo do form */
+    flex: 1 1 60%;
+    min-width: 600px;
 }
 
 #quote-summary {
-    background-color: var(--lavender); /* Cinza claro */
+    background-color: var(--lavender);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 40%; /* Summary fixado em 300px */
+    flex: 1 1 40%;
 }
 
 #quote-summary h2 {
-    background-color: var(--brown); /* Marrom claro */
-    color: var(--white); /* Branco */
+    background-color: var(--brown);
+    color: var(--white);
     padding: 10px;
     border-radius: 5px;
 }
 
 label {
     display: block; 
-    margin-bottom: 5px; /* Espaço entre o label e o campo de texto correspondente */
+    margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -82,11 +82,11 @@ textarea,
 select {
     width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 20px; /* Aumenta o espaço abaixo de cada campo de entrada */
+    margin-bottom: 20px;
     border: 1px solid #DDD;
     border-radius: 5px;
     background-color: var(--white); 
-    color: var(--black); /* Corrigido para preto para legibilidade */
+    color: var(--black);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -106,7 +106,7 @@ textarea::placeholder,
 select::placeholder {
     font-size: 14px; 
     color: var(--lightgray); 
-    opacity: 1; 
+    opacity: 1;
 }
 
 select {
@@ -121,8 +121,8 @@ select option:first-child {
 .primary,
 input[type="submit"],
 input[type="reset"] {
-    background-color: var(--brown); /* Marrom claro */
-    color: var(--white); /* Branco */
+    background-color: var(--brown);
+    color: var(--white);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -144,17 +144,17 @@ input[type="reset"]:hover {
 @media screen and (max-width: 768px) {
     #main-content {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
     #quote-summary {
         margin-left: 0;
         margin-top: 20px;
-        width: 100%; 
-        max-width: none; 
+        width: 100%;
+        max-width: none;
     }
     #quote-form {
         width: 100%;
-        min-width: unset; 
+        min-width: unset;
     }
 }
 
@@ -169,7 +169,6 @@ input[type="reset"]:hover {
     }
 }
 
-/* Ajuste para garantir que os radio buttons fiquem lado a lado */
 input[type="radio"] {
     display: inline-block;
     margin-right: 5px; 
@@ -182,34 +181,33 @@ label[for="recurring_cleaning_no"] {
     margin-left: 5px; 
 }
 
-/* Estilo do rodapé */
 #footer {
-    background-color: var(--lightPink); /* Cor de fundo do rodapé */
-    padding: 40px 20px; /* Espaçamento interno */
+    background-color: var(--lightPink);
+    padding: 40px 20px;
     display: flex;
-    flex-direction: column; /* Exibe em coluna primeiro */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    width: 100%; /* Ocupa toda a largura disponível */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    margin-top: 20px; /* Margem superior */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
 }
 
 #footer .footer-content {
-    display: flex; /* Divide em duas colunas */
-    justify-content: space-between; /* Distribui espaço entre as colunas */
-    width: 100%; /* Largura total para alinhamento */
-    max-width: 1200px; /* Alinhado ao formulário e ao summary */
-    margin-bottom: 20px; /* Espaço abaixo das colunas */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
 }
 
 #footer section {
-    width: 45%; 
+    width: 45%;
 }
 
 #footer h2 {
     font-size: 18px;
     color: var(--brown); 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #footer p, 
@@ -217,18 +215,18 @@ label[for="recurring_cleaning_no"] {
 #footer a {
     color: var(--brown); 
     text-decoration: none; 
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 #footer .icons a {
     display: inline-block;
     margin-right: 15px; 
     color: var(--brown); 
-    font-size: 18px; 
+    font-size: 18px;
 }
 
 #footer .icons a:hover {
-    color: var(--brown); 
+    color: var(--brown);
 }
 
 #footer section ul {
@@ -239,14 +237,14 @@ label[for="recurring_cleaning_no"] {
 }
 
 #footer section ul li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     display: flex;
     align-items: center; 
     color: var(--brown);
 }
 
 #footer section ul li i {
-    margin-right: 10px; 
+    margin-right: 10px;
     color: var(--brown); 
 }
 
@@ -254,36 +252,41 @@ label[for="recurring_cleaning_no"] {
     text-align: center; 
     width: 100%; 
     font-size: 12px; 
-    color: var(--brown); 
+    color: var(--brown);
 }
 
 @media screen and (max-width: 480px) {
-    /* Ajustes de largura para inputs e elementos */
     input[type="text"],
     input[type="email"],
     input[type="number"],
     input[type="date"],
     textarea,
     select {
-        width: calc(100% - 20px); /* Garante espaçamento lateral */
-        margin-right: 10px; /* Adiciona margem à direita */
+        width: calc(100% - 20px);
+        margin-right: 10px;
     }
 
-    /* Ajuste de padding para o form e resumo */
     #quote-form, #quote-summary {
-        padding-left: 15px; /* Adiciona espaçamento para não colar na borda */
-        padding-right: 15px; /* Adiciona espaçamento para não colar na borda */
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    /* Ajustes no container principal */
     #main-content {
-        padding-left: 15px; /* Espaçamento lateral para o container principal */
-        padding-right: 15px; /* Espaçamento lateral */
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    /* Garantir alinhamento no rodapé */
     #footer {
-        padding-left: 15px; /* Espaçamento para o rodapé */
-        padding-right: 15px; /* Espaçamento para o rodapé */
+        padding-left: 15px;
+        padding-right: 15px;
     }
+}
+
+#nav ul a i {
+    font-size: 3.5rem;
+    color: var(--brown);
+}
+
+#nav ul li a:hover i {
+    color: var(--colorSecondary);
 }

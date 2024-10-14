@@ -1,25 +1,15 @@
-(function(){
-    const key = atob("NnpFRU9NZjBMTEMxX0ppM18="); 
-    emailjs.init({
-        publicKey: key,
-    });
-})();
-
-
 document.addEventListener('DOMContentLoaded', function() {
     var serviceSelect = document.getElementById('service');
     var additionalFields = document.getElementById('additional-fields');
     var frequencyField = document.getElementById('frequency-field');
 
-    // Event listener for service selection
     serviceSelect.addEventListener('change', function() {
         var service = this.value;
         showRelevantFields(service);
         updateSummary();
-        calculatePrice(); // Ensure price is calculated initially
+        calculatePrice();
     });
 
-    // Add event listeners to fields that affect summary
     addEventListeners();
 
     function addEventListeners() {
@@ -30,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (element) {
                 element.addEventListener('input', function() {
                     updateSummary();
-                    calculatePrice(); // Recalculate price on every input change
+                    calculatePrice();
                 });
                 element.addEventListener('change', function() {
                     updateSummary();
@@ -92,71 +82,69 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculatePrice() {
         const serviceSelect = document.getElementById('service');
         const unitType = document.getElementById('unit_type').value;
-        const totalBathrooms = parseInt(document.getElementById('total_bathrooms').value, 10) || 0;
+        const totalBathrooms = parseInt(document.getElementById('total_bathrooms').value, 10) || 1;
         const frequency = document.getElementById('frequency').value;
         const sizeSquareFeet = parseInt(document.getElementById('size_square_feet').value, 10) || 0;
         let price = 0;
-
+    
         switch(serviceSelect.value) {
-            case 'regular_clean':
-                if (unitType === 'apartment') {
-                    price = totalBathrooms === 1 ? 100 : totalBathrooms === 2 ? 120 : 120 + (totalBathrooms - 2) * 50;
-                } else if (unitType === 'house') {
-                    price = totalBathrooms <= 2 ? 150 : totalBathrooms === 3 ? 180 : 180 + (totalBathrooms - 3) * 50;
-                }
-                break;
-
             case 'one_time_clean':
-                if (unitType === 'apartment') {
-                    price = totalBathrooms === 1 ? 140 : totalBathrooms === 2 ? 160 : 160 + (totalBathrooms - 2) * 50;
+                price = 140;
+                if (unitType === 'apartment' || unitType === 'condo') {
+                    price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
-                    price = totalBathrooms <= 2 ? 190 : totalBathrooms === 3 ? 220 : 220 + (totalBathrooms - 3) * 50;
+                    price = totalBathrooms <= 2 ? 190 : 220 + (totalBathrooms - 3) * 50;
                 }
                 break;
-
+    
+            case 'regular_clean':
+                price = 100;
+                if (unitType === 'apartment' || unitType === 'condo') {
+                    price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
+                } else if (unitType === 'house') {
+                    price = totalBathrooms <= 2 ? 150 : 180 + (totalBathrooms - 3) * 50;
+                }
+                break;
+    
             case 'deep_clean':
-                if (unitType === 'apartment') {
-                    price = totalBathrooms === 1 ? 200 : totalBathrooms === 2 ? 220 : 220 + (totalBathrooms - 2) * 50;
+                price = 200; 
+                if (unitType === 'apartment' || unitType === 'condo') {
+                    price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
-                    price = totalBathrooms <= 2 ? 250 : totalBathrooms === 3 ? 280 : 280 + (totalBathrooms - 3) * 50;
+                    price = totalBathrooms <= 2 ? 250 : 280 + (totalBathrooms - 3) * 50;
                 }
                 break;
-
+    
             case 'move_in_out':
-                if (unitType === 'apartment') {
-                    price = totalBathrooms === 1 ? 220 : totalBathrooms === 2 ? 240 : 240 + (totalBathrooms - 2) * 50;
+                price = 220; 
+                if (unitType === 'apartment' || unitType === 'condo') {
+                    price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
-                    price = totalBathrooms <= 2 ? 270 : totalBathrooms === 3 ? 300 : 300 + (totalBathrooms - 3) * 50;
+                    price = totalBathrooms <= 2 ? 270 : 300 + (totalBathrooms - 3) * 50;
                 }
                 break;
-
+    
             case 'cleaning_airbnb':
-                if (unitType === 'apartment') {
-                    price = totalBathrooms === 1 ? 130 : totalBathrooms === 2 ? 150 : 150 + (totalBathrooms - 2) * 50;
+                price = 130; 
+                if (unitType === 'apartment' || unitType === 'condo') {
+                    price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
-                    price = totalBathrooms <= 2 ? 180 : totalBathrooms === 3 ? 210 : 210 + (totalBathrooms - 3) * 50;
+                    price = totalBathrooms <= 2 ? 180 : 210 + (totalBathrooms - 3) * 50;
                 }
                 break;
-
+    
             case 'balcony':
-                if (sizeSquareFeet <= 100) {
-                    price = 120;
-                } else if (sizeSquareFeet > 100 && sizeSquareFeet <= 180) {
-                    price = 180;
-                } else if (sizeSquareFeet > 180) {
-                    price = 220;
-                }
+                price = sizeSquareFeet <= 100 ? 120 : sizeSquareFeet <= 180 ? 180 : 220;  
                 break;
-
+    
             default:
-                price = 0;
+                price = 0; 
                 break;
         }
-
+    
         document.getElementById('price-value').textContent = price.toFixed(2);
     }
 
-    // Initial setup
     showRelevantFields(serviceSelect.value);
     updateSummary();
     calculatePrice();
