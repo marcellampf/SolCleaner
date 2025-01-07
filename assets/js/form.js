@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
     
             case 'regular_clean':
-                price = 100;
+                price = 120;
                 if (unitType === 'apartment' || unitType === 'condo') {
                     price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
     
             case 'deep_clean':
-                price = 200; 
+                price = 230; 
                 if (unitType === 'apartment' || unitType === 'condo') {
                     price += (totalBathrooms === 2 ? 20 : (totalBathrooms > 2 ? (totalBathrooms - 2) * 50 : 0));
                 } else if (unitType === 'house') {
@@ -131,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (unitType === 'house') {
                     price = totalBathrooms <= 2 ? 180 : 210 + (totalBathrooms - 3) * 50;
                 }
+                break;
+
+            case 'office_cleaning':
+                price = sizeSquareFeet <= 100 ? 120 : sizeSquareFeet <= 180 ? 180 : 220;
                 break;
     
             case 'balcony':
