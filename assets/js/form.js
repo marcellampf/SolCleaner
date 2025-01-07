@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 break;
 
-            case 'office_cleaning':
+            case 'cleaning_office':
                 price = sizeSquareFeet <= 100 ? 120 : sizeSquareFeet <= 180 ? 180 : 220;
                 break;
     
