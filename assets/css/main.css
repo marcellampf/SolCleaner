@@ -55,6 +55,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	--fontTwo: "Courier New", monospace;
     --fontThree: "Source Sans Pro", Helvetica, sans-serif;
     --colorNeutralOne: #FAF9F6;
+    --mediumGrayBoxIndex: #5A5A5A;
     --colorNeutralTwo: #FFF9FB;
     --colorNeutralThree: #252525;
     --colorSecondary: #BC8F8F;
@@ -624,13 +625,13 @@ body.is-preload #header.alt .logo {
 
 .bannerType-Text-detailed-main {
 	font-weight: bold;
-	color: var(--colorNeutralOne);
+	color: var(--mediumGrayBoxIndex);
 	letter-spacing: 0.5rem;
 }
 
 .bannerType-Text-detailed-normal,
 .icon.fa-calendar-check {
-	color: var(--colorNeutralOne);
+	color: var(--mediumGrayBoxIndex);
 }
 
 .bannerType-Text-detailed-normal {
