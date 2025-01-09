@@ -58,6 +58,7 @@ blockquote:before, blockquote:after, q:before, q:after {
     --colorNeutralTwo: #FFF9FB;
     --colorNeutralThree: #252525;
     --colorSecondary: #BC8F8F;
+    --colorBoxIndex: #FADADD;
     --colorAccentOne: #FAF9F6;
     --colorAccentTwo: #FEDB8A;
 	--colorLightGray: #DCDCDC;
@@ -590,7 +591,7 @@ body.is-preload #header.alt .logo {
 .bannerType {
 	display: flex;
 	border-radius: 5rem;
-	background-color: var(--colorSecondary);
+	background-color: var(--colorBoxIndex);
 	padding: 0.5rem;
 	justify-content: space-between;
 	width: 100%;
