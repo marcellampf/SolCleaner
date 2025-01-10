@@ -599,7 +599,7 @@ body.is-preload #header.alt .logo {
 	align-items: center;
 }
 .bannerType-button .fa-calendar-check {
-    color: var(--colorNeutralThree); 
+    color: var(--mediumGrayBoxIndex); 
 }
 .bannerType-button:hover .fa-calendar-check {
     color: var(--lightgray); 
