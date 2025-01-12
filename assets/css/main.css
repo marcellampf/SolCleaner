@@ -650,7 +650,7 @@ body.is-preload #header.alt .logo {
 }
 
 .bannerType-Price {
-    color: var(--colorAccentTwo);
+    color: var(--priceColor);
 	flex-direction: column;
 	margin: 0;
 }
