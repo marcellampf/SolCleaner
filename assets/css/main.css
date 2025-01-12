@@ -1039,10 +1039,19 @@ body.is-preload #header.alt .logo {
     text-align: center;
 }
 
-.gallery .image img {
+/* .gallery .image img {
     max-width: 100%;
     border-radius: 8px;
+} */
+
+.gallery .image img {
+    width: 100%; /* Faz as imagens ocuparem toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+    aspect-ratio: 16 / 9; /* Garante proporções consistentes, altere conforme necessário */
+    border-radius: 8px; /* Mantém as bordas arredondadas */
 }
+
 
 .service ul {
     background-color: var(--lavender); 
