@@ -553,16 +553,19 @@ body.is-preload #header.alt .logo {
 	margin-bottom: 2em;
 }
 
+
 .image.team img {
-	width: 100%;
-	height: auto;
-	transition: transform 0.3s ease-in-out;
-	border-radius: 8px;
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .image.team img:hover {
-	transform: scale(1.05);
+    transform: scale(1.05); 
 }
+
 
 @media screen and (max-width: 980px) {
 	.row.gtr-uniform {
@@ -1039,19 +1042,13 @@ body.is-preload #header.alt .logo {
     text-align: center;
 }
 
-/* .gallery .image img {
-    max-width: 100%;
-    border-radius: 8px;
-} */
-
 .gallery .image img {
-    width: 100%; /* Faz as imagens ocuparem toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
-    aspect-ratio: 16 / 9; /* Garante proporções consistentes, altere conforme necessário */
-    border-radius: 8px; /* Mantém as bordas arredondadas */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    aspect-ratio: 16 / 9;
+    border-radius: 8px; 
 }
-
 
 .service ul {
     background-color: var(--lavender); 
